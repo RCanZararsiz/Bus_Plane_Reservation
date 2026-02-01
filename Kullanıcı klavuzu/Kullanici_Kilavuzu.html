@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otobüs ve Uçak Rezervasyon Sistemi - Kullanıcı Kılavuzu</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #34495e;
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+            margin-top: 40px;
+        }
+        h3 {
+            color: #2980b9;
+            margin-top: 25px;
+        }
+        .toc {
+            background: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .toc ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .toc li {
+            margin: 8px 0;
+        }
+        .toc a {
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .toc a:hover {
+            color: #3498db;
+        }
+        .feature-box {
+            background: #e8f4fd;
+            border: 1px solid #3498db;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .warning-box {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .info-box {
+            background: #d1ecf1;
+            border: 1px solid #17a2b8;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .step-box {
+            background: #f8f9fa;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .code-block {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+        .screenshot {
+            text-align: center;
+            margin: 20px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        .screenshot img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .color-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .color-table th, .color-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        .color-table th {
+            background-color: #3498db;
+            color: white;
+        }
+        .color-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .emoji {
+            font-size: 1.2em;
+        }
+        .contact-info {
+            background: #e8f5e8;
+            border: 1px solid #28a745;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        @media print {
+            body {
+                background: white;
+            }
+            .container {
+                box-shadow: none;
+                padding: 20px;
+            }
+            .toc {
+                background: white;
+                border: 1px solid #ddd;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚌✈️ Otobüs ve Uçak Rezervasyon Sistemi - Kullanıcı Kılavuzu</h1>
+        
+        <div class="toc">
+            <h2>📋 İçindekiler</h2>
+            <ul>
+                <li><a href="#giris">1. Giriş</a></li>
+                <li><a href="#sistem-gereksinimleri">2. Sistem Gereksinimleri</a></li>
+                <li><a href="#uygulamayi-baslatma">3. Uygulamayı Başlatma</a></li>
+                <li><a href="#giris-ekrani">4. Giriş Ekranı</a></li>
+                <li><a href="#kayit-olma">5. Kayıt Olma</a></li>
+                <li><a href="#ana-secim-ekrani">6. Ana Seçim Ekranı</a></li>
+                <li><a href="#otobus-rezervasyonu">7. Otobüs Rezervasyonu</a></li>
+                <li><a href="#ucak-rezervasyonu">8. Uçak Rezervasyonu</a></li>
+                <li><a href="#admin-paneli">9. Admin Paneli</a></li>
+                <li><a href="#odeme-islemleri">10. Ödeme İşlemleri</a></li>
+                <li><a href="#sik-sorulan-sorular">11. Sık Sorulan Sorular</a></li>
+                <li><a href="#sorun-giderme">12. Sorun Giderme</a></li>
+            </ul>
+        </div>
+
+        <section id="giris">
+            <h2>🎯 Giriş</h2>
+            <p>Bu kılavuz, Otobüs ve Uçak Rezervasyon Sistemi'nin nasıl kullanılacağını adım adım açıklar. Sistem, kullanıcıların otobüs ve uçak seferleri için kolayca rezervasyon yapabilmelerini sağlar.</p>
+            
+            <div class="feature-box">
+                <h3>🎨 Arayüz Özellikleri</h3>
+                <ul>
+                    <li><strong>Modern ve Kullanıcı Dostu Tasarım:</strong> Koyu tema ile göz yormayan arayüz</li>
+                    <li><strong>Responsive Tasarım:</strong> Farklı ekran boyutlarına uyumlu</li>
+                    <li><strong>Türkçe Arayüz:</strong> Tamamen Türkçe dil desteği</li>
+                    <li><strong>Görsel Geri Bildirim:</strong> Renkli koltuk durumu göstergeleri</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="sistem-gereksinimleri">
+            <h2>💻 Sistem Gereksinimleri</h2>
+            
+            <h3>Minimum Gereksinimler</h3>
+            <ul>
+                <li><strong>İşletim Sistemi:</strong> Windows 10/11, macOS 10.14+, Linux</li>
+                <li><strong>Java Runtime Environment:</strong> Java 21 veya üzeri</li>
+                <li><strong>RAM:</strong> 2 GB</li>
+                <li><strong>Disk Alanı:</strong> 100 MB boş alan</li>
+                <li><strong>Ekran Çözünürlüğü:</strong> 1024x768 minimum</li>
+            </ul>
+
+            <h3>Önerilen Gereksinimler</h3>
+            <ul>
+                <li><strong>RAM:</strong> 4 GB veya üzeri</li>
+                <li><strong>Ekran Çözünürlüğü:</strong> 1920x1080 veya üzeri</li>
+                <li><strong>İnternet Bağlantısı:</strong> Veritabanı güncellemeleri için</li>
+            </ul>
+        </section>
+
+        <section id="uygulamayi-baslatma">
+            <h2>🚀 Uygulamayı Başlatma</h2>
+            
+            <div class="step-box">
+                <h3>1. Java Kontrolü</h3>
+                <p>Öncelikle sisteminizde Java'nın yüklü olduğunu kontrol edin:</p>
+                <div class="code-block">java -version</div>
+            </div>
+
+            <div class="step-box">
+                <h3>2. Uygulamayı Çalıştırma</h3>
+                <div class="code-block">java -cp "bin;lib/*" demo</div>
+            </div>
+
+            <div class="step-box">
+                <h3>3. JAR Dosyası ile Çalıştırma</h3>
+                <div class="code-block">java -jar ReservationSystem.jar</div>
+            </div>
+        </section>
+
+        <section id="giris-ekrani">
+            <h2>🔐 Giriş Ekranı</h2>
+            
+            <div class="screenshot">
+                <p><strong>Giriş Ekranı</strong></p>
+                <img src="screenshots/login_screen.png" alt="Giriş Ekranı" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 5px;">
+            </div>
+
+            <h3>Ekran Özellikleri</h3>
+            <ul>
+                <li><strong>Başlık:</strong> "Otobüs ve Uçak Rezervasyon Sistemi"</li>
+                <li><strong>Kullanıcı Adı Alanı:</strong> Giriş yapmak için kullanıcı adınızı girin</li>
+                <li><strong>Şifre Alanı:</strong> Hesabınızın şifresini girin</li>
+                <li><strong>Giriş Yap Butonu:</strong> Mavi renkli, giriş işlemini başlatır</li>
+                <li><strong>Kayıt Ol Butonu:</strong> Gri renkli, yeni hesap oluşturma ekranına yönlendirir</li>
+            </ul>
+
+            <div class="step-box">
+                <h3>Giriş Yapma Adımları</h3>
+                <ol>
+                    <li><strong>Kullanıcı Adı</strong> alanına kullanıcı adınızı yazın</li>
+                    <li><strong>Şifre</strong> alanına şifrenizi yazın</li>
+                    <li><strong>Giriş Yap</strong> butonuna tıklayın</li>
+                    <li>Başarılı giriş durumunda hoş geldin mesajı görüntülenir</li>
+                </ol>
+            </div>
+
+            <div class="info-box">
+                <h3>Test Kullanıcıları</h3>
+                <ul>
+                    <li><strong>Admin:</strong> Kullanıcı adı: <code>Rahmi</code>, Şifre: <code>123</code></li>
+                    <li><strong>Normal Kullanıcı:</strong> Kendi oluşturduğunuz hesap</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="kayit-olma">
+            <h2>📝 Kayıt Olma</h2>
+            
+            <div class="screenshot">
+                <p><strong>Kayıt Ekranı</strong></p>
+                <img src="screenshots/signup_screen.png" alt="Kayıt Ekranı" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 5px;">
+            </div>
+
+            <h3>Kayıt Formu</h3>
+            <ul>
+                <li><strong>Kullanıcı Adı:</strong> Benzersiz bir kullanıcı adı seçin</li>
+                <li><strong>Şifre:</strong> Güçlü bir şifre oluşturun</li>
+                <li><strong>Kayıt Ol Butonu:</strong> Hesabınızı oluşturur</li>
+            </ul>
+
+            <div class="step-box">
+                <h3>Kayıt Olma Adımları</h3>
+                <ol>
+                    <li><strong>Kullanıcı Adı</strong> alanına benzersiz bir kullanıcı adı yazın</li>
+                    <li><strong>Şifre</strong> alanına güçlü bir şifre yazın</li>
+                    <li><strong>Şifre Tekrar</strong> alanına şifrenizi tekrar yazın</li>
+                    <li><strong>Kayıt Ol</strong> butonuna tıklayın</li>
+                    <li>Başarılı kayıt durumunda giriş ekranına yönlendirilirsiniz</li>
+                </ol>
+            </div>
+
+            <div class="info-box">
+                <h3>Şifre Tavsiyeleri</h3>
+                <ul>
+                    <li>Büyük/küçük harf kombinasyonu önerilir</li>
+                    <li>Sayı ve özel karakter kullanımı önerilir</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="ana-secim-ekrani">
+            <h2>🎯 Ana Seçim Ekranı</h2>
+            
+            <div class="screenshot">
+                <p><strong>Seçim Ekranı</strong></p>
+                <img src="screenshots/choosing_screen.png" alt="Seçim Ekranı" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 5px;">
+            </div>
+
+            <h3>Ekran Düzeni</h3>
+            <ul>
+                <li><strong>Sol Panel:</strong> Otobüs rezervasyonu için (otobüs resmi ile)</li>
+                <li><strong>Sağ Panel:</strong> Uçak rezervasyonu için (uçak resmi ile)</li>
+                <li><strong>Otobüs Butonu:</strong> Beyaz çerçeveli, hover efekti ile</li>
+                <li><strong>Uçak Butonu:</strong> Beyaz çerçeveli, hover efekti ile</li>
+            </ul>
+
+            <div class="step-box">
+                <h3>Seçim Yapma</h3>
+                <ol>
+                    <li><strong>Otobüs</strong> butonuna tıklayarak otobüs rezervasyonu yapın</li>
+                    <li><strong>Uçak</strong> butonuna tıklayarak uçak rezervasyonu yapın</li>
+                    <li>Her seçim size uygun paneli açar</li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="otobus-rezervasyonu">
+            <h2>🚌 Otobüs Rezervasyonu</h2>
+            
+            <div class="screenshot">
+                <p><strong>Otobüs Paneli</strong></p>
+                <img src="screenshots/bus_panel.png" alt="Otobüs Paneli" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 5px;">
+            </div>
+
+            <h3>Panel Özellikleri</h3>
+            <ul>
+                <li><strong>Başlık:</strong> "🚌 Otobüs Rezervasyon Sistemi"</li>
+                <li><strong>Üst Butonlar:</strong> Giriş Ekranı ve Seçim Ekranı'na dönüş</li>
+                <li><strong>Sefer Seçimi:</strong> Dropdown menü ile mevcut seferler</li>
+                <li><strong>Koltuk Düzeni:</strong> 40 koltuklu otobüs düzeni (2-2-2-2)</li>
+                <li><strong>Alt Butonlar:</strong> Rezervasyon, İptal ve Geri Alma işlemleri</li>
+            </ul>
+
+            <h3>Koltuk Düzeni</h3>
+            <div class="code-block">
+[1] [2]    [3] [4]
+[5] [6]    [7] [8]
+[9] [10]   [11] [12]
+...
+[37] [38]  [39] [40]
+            </div>
+
+            <h3>Koltuk Renk Kodları</h3>
+            <table class="color-table">
+                <tr>
+                    <th>Renk</th>
+                    <th>Anlam</th>
+                </tr>
+                <tr>
+                    <td><span class="emoji">🟢</span> Yeşil</td>
+                    <td>Boş koltuk</td>
+                </tr>
+                <tr>
+                    <td><span class="emoji">🔴</span> Kırmızı</td>
+                    <td>Dolu koltuk (başka kullanıcı tarafından)</td>
+                </tr>
+                <tr>
+                    <td><span class="emoji">🔵</span> Mavi</td>
+                    <td>Sizin rezervasyonunuz</td>
+                </tr>
+                <tr>
+                    <td><span class="emoji">🟡</span> Sarı</td>
+                    <td>Seçili koltuk</td>
+                </tr>
+            </table>
+
+            <div class="step-box">
+                <h3>Rezervasyon Yapma Adımları</h3>
+                <ol>
+                    <li><strong>Sefer Seçiniz</strong> dropdown'ından bir sefer seçin</li>
+                    <li>İstediğiniz <strong>koltuk numarasına</strong> tıklayın (sarı olur)</li>
+                    <li><strong>✔ Rezervasyon Yap</strong> butonuna tıklayın</li>
+                    <li>Başarılı rezervasyon mesajı görüntülenir</li>
+                </ol>
+            </div>
+
+            <div class="step-box">
+                <h3>Rezervasyon İptal Etme</h3>
+                <ol>
+                    <li>Kendi rezervasyonunuzu (mavi koltuk) seçin</li>
+                    <li><strong>✖ Rezervasyonu İptal Et</strong> butonuna tıklayın</li>
+                    <li>İptal onayı alın</li>
+                </ol>
+            </div>
+
+            <div class="info-box">
+                <h3>Son İşlemi Geri Alma</h3>
+                <p><strong>↶ Son İşlemi Geri Al</strong> butonu ile son yapılan işlemi geri alabilirsiniz</p>
+            </div>
+        </section>
+
+        <section id="ucak-rezervasyonu">
+            <h2>✈️ Uçak Rezervasyonu</h2>
+            
+            <div class="screenshot">
+                <p><strong>Uçak Paneli</strong></p>
+                <img src="screenshots/plane_panel.png" alt="Uçak Paneli" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 5px;">
+            </div>
+
+            <h3>Panel Özellikleri</h3>
+            <ul>
+                <li><strong>Başlık:</strong> "✈️ Uçak Rezervasyon Sistemi"</li>
+                <li><strong>Üst Butonlar:</strong> Giriş Ekranı ve Seçim Ekranı'na dönüş</li>
+                <li><strong>Sefer Seçimi:</strong> Dropdown menü ile mevcut seferler</li>
+                <li><strong>Koltuk Düzeni:</strong> 180 koltuklu uçak düzeni (3-3-3)</li>
+                <li><strong>Alt Butonlar:</strong> Rezervasyon, İptal ve Geri Alma işlemleri</li>
+            </ul>
+
+            <h3>Koltuk Düzeni</h3>
+            <div class="code-block">
+[A] [B] [C]  [D] [E] [F]
+[1] [2] [3]  [4] [5] [6]
+[7] [8] [9]  [10] [11] [12]
+...
+[175] [176] [177]  [178] [179] [180]
+            </div>
+
+            <h3>Koltuk Renk Kodları</h3>
+            <table class="color-table">
+                <tr>
+                    <th>Renk</th>
+                    <th>Anlam</th>
+                </tr>
+                <tr>
+                    <td><span class="emoji">🟢</span> Yeşil</td>
+                    <td>Boş koltuk</td>
+                </tr>
+                <tr>
+                    <td><span class="emoji">🔴</span> Kırmızı</td>
+                    <td>Dolu koltuk (başka kullanıcı tarafından)</td>
+                </tr>
+                <tr>
+                    <td><span class="emoji">🔵</span> Mavi</td>
+                    <td>Sizin rezervasyonunuz</td>
+                </tr>
+                <tr>
+                    <td><span class="emoji">🟡</span> Sarı</td>
+                    <td>Seçili koltuk</td>
+                </tr>
+            </table>
+
+            <div class="step-box">
+                <h3>Rezervasyon Yapma Adımları</h3>
+                <ol>
+                    <li><strong>Sefer Seçiniz</strong> dropdown'ından bir sefer seçin</li>
+                    <li>İstediğiniz <strong>koltuk numarasına</strong> tıklayın (sarı olur)</li>
+                    <li><strong>✔ Rezervasyon Yap</strong> butonuna tıklayın</li>
+                    <li>Başarılı rezervasyon mesajı görüntülenir</li>
+                </ol>
+            </div>
+
+            <div class="step-box">
+                <h3>Rezervasyon İptal Etme</h3>
+                <ol>
+                    <li>Kendi rezervasyonunuzu (mavi koltuk) seçin</li>
+                    <li><strong>✖ Rezervasyonu İptal Et</strong> butonuna tıklayın</li>
+                    <li>İptal onayı alın</li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="admin-paneli">
+            <h2>👨‍💼 Admin Paneli</h2>
+
+            <div class="info-box">
+                <h3>Admin Girişi</h3>
+                <ul>
+                    <li><strong>Kullanıcı Adı:</strong> <code>Rahmi</code></li>
+                    <li><strong>Şifre:</strong> <code>123</code></li>
+                </ul>
+            </div>
+
+            <h3>Admin Özellikleri</h3>
+            <ul>
+                <li><strong>Sefer Yönetimi:</strong> Yeni sefer ekleme, düzenleme, silme</li>
+                <li><strong>Kullanıcı Yönetimi:</strong> Kullanıcı hesaplarını görüntüleme</li>
+                <li><strong>Rezervasyon İstatistikleri:</strong> Sistem geneli rezervasyon verileri</li>
+                <li><strong>Sistem Ayarları:</strong> Uygulama konfigürasyonu</li>
+            </ul>
+
+            <div class="screenshot">
+                <p><strong>Otobüs Admin Paneli</strong></p>
+                <img src="screenshots/bus_admin.png" alt="Otobüs Admin Paneli" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 5px;">
+            </div>
+
+            <div class="screenshot">
+                <p><strong>Uçak Admin Paneli</strong></p>
+                <img src="screenshots/plane_admin.png" alt="Uçak Admin Paneli" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 5px;">
+            </div>
+        </section>
+
+        <section id="odeme-islemleri">
+            <h2>💳 Ödeme İşlemleri</h2>
+
+            <div class="screenshot">
+                <p><strong>Ödeme Formu</strong></p>
+                <img src="screenshots/payment_form.png" alt="Ödeme Formu" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 5px;">
+            </div>
+
+            <h3>Desteklenen Kart Türleri</h3>
+            <ul>
+                <li><strong>Visa:</strong> 4xxx xxxx xxxx xxxx</li>
+                <li><strong>MasterCard:</strong> 5xxx xxxx xxxx xxxx</li>
+                <li><strong>American Express:</strong> 3xxx xxxxxx xxxxx</li>
+            </ul>
+
+            <div class="step-box">
+                <h3>Ödeme Adımları</h3>
+                <ol>
+                    <li><strong>Kart Numarası</strong> alanına kart numaranızı girin</li>
+                    <li><strong>Son Kullanma Tarihi</strong> alanına AA/YY formatında tarih girin</li>
+                    <li><strong>CVV</strong> alanına güvenlik kodunu girin</li>
+                    <li><strong>Kart Sahibi</strong> alanına adınızı yazın</li>
+                    <li><strong>Ödemeyi Tamamla</strong> butonuna tıklayın</li>
+                </ol>
+            </div>
+
+            <div class="info-box">
+                <h3>Güvenlik</h3>
+                <ul>
+                    <li>Kart bilgileri şifrelenerek saklanır</li>
+                    <li>CVV bilgisi hiçbir yerde saklanmaz</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="sik-sorulan-sorular">
+            <h2>❓ Sık Sorulan Sorular</h2>
+
+            <div class="feature-box">
+                <h3>Q: Şifremi unuttum, ne yapmalıyım?</h3>
+                <p><strong>A:</strong> Şu anda şifre sıfırlama özelliği bulunmamaktadır. Yeni bir hesap oluşturabilirsiniz.</p>
+            </div>
+
+            <div class="feature-box">
+                <h3>Q: Aynı anda birden fazla koltuk rezerve edebilir miyim?</h3>
+                <p><strong>A:</strong> Hayır, her kullanıcı aynı anda sadece bir koltuk rezerve edebilir.</p>
+            </div>
+
+            <div class="feature-box">
+                <h3>Q: Farklı seferler için rezervasyon yapabilir miyim?</h3>
+                <p><strong>A:</strong> Evet, farklı seferler için ayrı ayrı rezervasyon yapabilirsiniz.</p>
+            </div>
+
+            <div class="feature-box">
+                <h3>Q: Rezervasyon bilgilerimi nasıl görüntüleyebilirim?</h3>
+                <p><strong>A:</strong> Şu anda rezervasyon geçmişi görüntüleme özelliği bulunmamaktadır.</p>
+            </div>
+        </section>
+
+        <section id="sorun-giderme">
+            <h2>🔧 Sorun Giderme</h2>
+
+            <div class="warning-box">
+                <h3>Uygulama Açılmıyor</h3>
+                <ol>
+                    <li><strong>Java Kontrolü:</strong> <code>java -version</code> komutu ile Java'nın yüklü olduğunu kontrol edin</li>
+                    <li><strong>Dosya Yolu:</strong> Uygulamanın doğru klasörde olduğundan emin olun</li>
+                    <li><strong>Yetki Kontrolü:</strong> Yönetici olarak çalıştırmayı deneyin</li>
+                </ol>
+            </div>
+
+            <div class="warning-box">
+                <h3>Giriş Yapamıyorum</h3>
+                <ol>
+                    <li><strong>Kullanıcı Adı/Şifre:</strong> Doğru yazdığınızdan emin olun</li>
+                    <li><strong>Büyük/Küçük Harf:</strong> Kullanıcı adı ve şifre büyük/küçük harfe duyarlıdır</li>
+                    <li><strong>Boşluk Kontrolü:</strong> Başta ve sonda boşluk olmadığından emin olun</li>
+                </ol>
+            </div>
+
+            <div class="warning-box">
+                <h3>Rezervasyon Yapamıyorum</h3>
+                <ol>
+                    <li><strong>Koltuk Seçimi:</strong> Önce bir koltuk seçtiğinizden emin olun</li>
+                    <li><strong>Sefer Seçimi:</strong> Bir sefer seçtiğinizden emin olun</li>
+                    <li><strong>Koltuk Durumu:</strong> Seçtiğiniz koltuğun boş olduğundan emin olun</li>
+                </ol>
+            </div>
+
+            <div class="warning-box">
+                <h3>Veritabanı Hatası</h3>
+                <ol>
+                    <li><strong>Dosya İzinleri:</strong> <code>data/</code> klasörünün yazma izni olduğundan emin olun</li>
+                    <li><strong>Disk Alanı:</strong> Yeterli disk alanı olduğundan emin olun</li>
+                    <li><strong>Uygulama Yeniden Başlatma:</strong> Uygulamayı kapatıp tekrar açın</li>
+                </ol>
+            </div>
+
+            <div class="warning-box">
+                <h3>Performans Sorunları</h3>
+                <ol>
+                    <li><strong>Sistem Kaynakları:</strong> Diğer uygulamaları kapatın</li>
+                    <li><strong>Java Güncellemesi:</strong> Java'nın en son sürümünü kullanın</li>
+                    <li><strong>Bellek Ayarları:</strong> <code>-Xmx2g</code> parametresi ile daha fazla bellek ayırın</li>
+                </ol>
+            </div>
+        </section>
+
+        <div class="contact-info">
+            <h2>📞 Teknik Destek</h2>
+            
+            <h3>İletişim Bilgileri</h3>
+            <ul>
+                <li><strong>E-posta:</strong> support@rezervasyon.com</li>
+                <li><strong>Telefon:</strong> +90 xxx xxx xx xx</li>
+                <li><strong>Çalışma Saatleri:</strong> Pazartesi-Cuma 09:00-18:00</li>
+            </ul>
+
+            <h3>Hata Raporlama</h3>
+            <p>Hata raporlarken şu bilgileri paylaşın:</p>
+            <ul>
+                <li>İşletim sistemi ve sürümü</li>
+                <li>Java sürümü</li>
+                <li>Hata mesajının tam metni</li>
+                <li>Hatanın oluştuğu adımlar</li>
+            </ul>
+        </div>
+
+        <div class="info-box">
+            <h2>📄 Lisans ve Yasal</h2>
+            
+            <h3>Lisans</h3>
+            <p>Bu yazılım eğitim amaçlı geliştirilmiştir ve ücretsizdir.</p>
+
+            <h3>Gizlilik</h3>
+            <ul>
+                <li>Kişisel bilgileriniz güvenle saklanır</li>
+                <li>Üçüncü taraflarla paylaşılmaz</li>
+                <li>Sadece sistem işleyişi için kullanılır</li>
+            </ul>
+
+            <h3>Sorumluluk Reddi</h3>
+            <p>Bu yazılım "olduğu gibi" sunulmaktadır. Geliştirici herhangi bir zarardan sorumlu değildir.</p>
+        </div>
+
+        <hr style="margin: 40px 0; border: none; border-top: 2px solid #3498db;">
+
+        <p style="text-align: center; color: #7f8c8d; font-style: italic;">
+            <em>Son Güncelleme: 2025 | Versiyon: 1.0.0</em>
+        </p>
+    </div>
+</body>
+</html> 
